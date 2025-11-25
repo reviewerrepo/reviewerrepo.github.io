@@ -1322,6 +1322,154 @@ const quizData = {
         answer: "Surface",
         options: ["Surface", "Track", "Sector", "Cylinder"]
       }
-    ]
+    ],
+
+    // Add or merge this into your quizData object/file
+    6: [
+        // SUMMATIVE 2 (from PDF) - True/False and short items
+        { question: "Function parameters and return values are extremely flexible in Swift.", type: "true-false", answer: "TRUE", options: ["TRUE","FALSE"] },
+        { question: "Functions can have multiple input parameters, which are written within the function’s parentheses, separated by commas.", type: "true-false", answer: "TRUE", options: ["TRUE","FALSE"] },
+        { question: "In function you cannot return an optional tuple.", type: "true-false", answer: "FALSE", options: ["TRUE","FALSE"] },
+        { question: "You can return a tuple value using a function.", type: "true-false", answer: "TRUE", options: ["TRUE","FALSE"] },
+        { question: "Every function has a specific function type, made up of the parameter types and the return type of the function.", type: "true-false", answer: "TRUE", options: ["TRUE","FALSE"] },
+        { question: "The parameter name is used in the implementation of the function.", type: "true-false", answer: "TRUE", options: ["TRUE","FALSE"] },
+        { question: "Arrays, sets, and dictionaries in Swift are always clear about the types of values and keys that they can store.", type: "true-false", answer: "TRUE", options: ["TRUE","FALSE"] },
+        { question: "You can also define functions inside the bodies of other functions.", type: "true-false", answer: "TRUE", options: ["TRUE","FALSE"] },
+        { question: "If you create an array, a set, or a dictionary, and assign it to a variable (var), the collection that is created will be mutable.", type: "true-false", answer: "TRUE", options: ["TRUE","FALSE"] },
+        { question: "The argument label is used when calling the function.", type: "true-false", answer: "TRUE", options: ["TRUE","FALSE"] },
+        { question: "Function parameters are constants by default.", type: "true-false", answer: "TRUE", options: ["TRUE","FALSE"] },
+        { question: "You can iterate over the entire set of values in an array with the for-in loop.", type: "true-false", answer: "TRUE", options: ["TRUE","FALSE"] },
+        { question: "You access and modify an array through its methods and properties, or by using subscript syntax.", type: "true-false", answer: "TRUE", options: ["TRUE","FALSE"] },
+    
+        { question: "It accepts zero or more values of a specified type (term).", type: "fill-blank", answer: "Variadic", options: [] },
+        { question: "A set operation used to create a new set with only the values common to both sets.", type: "multiple-choice", answer: "Intersection", options: ["Intersection","Union","Subtracting","Symmetric Difference"] },
+        { question: "This character will be able to remove an argument label for a parameter.", type: "fill-blank", answer: "_", options: [] },
+        { question: "It is used to modify a parameter’s value, and you want those changes to persist after the function call has ended.", type: "fill-blank", answer: "inout", options: [] },
+        { question: "This is used when returning the return type of a function.", type: "fill-blank", answer: "->", options: [] },
+        { question: "It performs a single pass through the loop block first, before considering the loop’s condition.", type: "fill-blank", answer: "Repeat-While", options: [] },
+        { question: "Used to mark a loop statement or conditional statement.", type: "fill-blank", answer: "label", options: [] },
+        { question: "You “call” a function with its name and pass it input values known as __________.", type: "fill-blank", answer: "argument", options: [] },
+    
+        // MIDTERM EXAM items (multiple choice, T/F, and short answers)
+        { question: "Every function has a specific function type, made up of the parameter types and the return type of the function.", type: "true-false", answer: "TRUE", options: ["TRUE","FALSE"] },
+        { question: "You access and modify an array through its methods and properties, or by using subscript syntax.", type: "true-false", answer: "TRUE", options: ["TRUE","FALSE"] },
+        { question: "The parameter name is used in the implementation of the function.", type: "true-false", answer: "TRUE", options: ["TRUE","FALSE"] },
+        { question: "You can also define functions inside the bodies of other functions.", type: "true-false", answer: "TRUE", options: ["TRUE","FALSE"] },
+        { question: "You give a function a name that identifies what it does, and this name is used to “call” the function to perform its task when needed.", type: "true-false", answer: "TRUE", options: ["TRUE","FALSE"] },
+        { question: "Closures in Swift are similar to blocks in C/Objective-C and to lambdas.", type: "true-false", answer: "TRUE", options: ["TRUE","FALSE"] },
+        { question: "You can return a tuple value using a function.", type: "true-false", answer: "TRUE", options: ["TRUE","FALSE"] },
+        { question: "You can iterate over the entire set of values in an array with the for-in loop.", type: "true-false", answer: "TRUE", options: ["TRUE","FALSE"] },
+        { question: "The argument label is used when calling the function.", type: "true-false", answer: "TRUE", options: ["TRUE","FALSE"] },
+    
+        { question: "Used as simplified ternary operator for nil values.", type: "multiple-choice", answer: "??", options: ["??","!=nil","?:","?!"] },
+        { question: "A set method used to create a new set with only the values common to both sets.", type: "multiple-choice", answer: "intersection", options: ["union","symmetricDifference","subtracting","intersection"] },
+        { question: "What will be the exact output given the code print(Int(\"32\")!)", type: "multiple-choice", answer: "32", options: ["32","Optional(32)","Int(\"32\")!","Program error"] },
+        { question: "Which of the following produced some error: let a: Double = Double(\"10.25\") ?", type: "multiple-choice", answer: "let a: Double = Double(\"10.25\")", options: ["let a = Double(\"10.25\")","var a = Double(\"10.25\")","let a: Double = Double(\"10.25\")","let a: Double? = Double(\"10.25\")"] },
+        { question: "Which of the following has incorrect syntax: var x:Int = Int(\"123\") ?", type: "multiple-choice", answer: "var x:Int = Int(\"123\")", options: ["var x:Int = 10","var x:Int? = nil","var x = Int(\"10\")","var x:Int = Int(\"123\")"] },
+        { question: "Which programming languages can be used to develop iOS applications?", type: "multiple-choice", answer: "Objective-C and Swift", options: ["Java and Swift","C++ and Swift","Objective-C and Swift","Kotlin and Swift"] },
+    
+        { question: "A set operation to create a new set with values in either set, but not both.", type: "multiple-choice", answer: "symmetricDifference", options: ["intersection","symmetricDifference","subtracting","union"] },
+        { question: "Used to display the hierarchy of your folders where each column represents a folder.", type: "multiple-choice", answer: "Column view", options: ["List view","Column view","Icon view","Cover Flow view"] },
+        { question: "It is a self-contained chunk of code that performs a specific task.", type: "multiple-choice", answer: "Function", options: ["Collection","Control Flow","Function","Control Structure"] },
+        { question: "It accepts zero or more values of a specified type (term).", type: "multiple-choice", answer: "variadic", options: ["tuples","functions","variadic","collections"] },
+        { question: "Statement tells a loop to stop what it’s doing and start again at the beginning of the next iteration.", type: "multiple-choice", answer: "continue", options: ["return","break","fallthrough","continue"] },
+        { question: "It is used as the return type for a function to return multiple values as part of one compound return value.", type: "multiple-choice", answer: "Tuple", options: ["Collection","Void","Tuple","inout"] },
+        { question: "Which of the following does not belong to the group (+, -, *, %)?", type: "multiple-choice", answer: "%", options: ["+","-","*","%"] },
+        { question: "It performs a single pass through the loop block first, before considering the loop’s condition.", type: "multiple-choice", answer: "Repeat-While", options: ["Do-While","Repeat-While","For-In","While"] },
+    
+        { question: "Which statement is correct? let a = 1_0_1_0", type: "multiple-choice", answer: "let a = 1_0_1_0", options: ["let a = 1-0-1-0","let a:UInt8 = 1010","let a:Int8 = 1010","let a = 1_0_1_0"] },
+        { question: "On Mac it represents the files on your computer.", type: "multiple-choice", answer: "folders", options: ["menus","folders","icons","images"] },
+        { question: "Who first introduced the iPhone on the market?", type: "multiple-choice", answer: "Steve Jobs", options: ["Steve Jobs","Steve Wozniak","Mark Zuckerberg","Tim Cook"] },
+        { question: "Which of the following does not belong to the group: Sets, Arrays (Lists), Dictionaries, Tuples?", type: "multiple-choice", answer: "Tuples", options: ["Sets","Arrays (Lists)","Dictionaries","Tuples"] },
+        { question: "This property is used to check if a given string or collection is empty or not.", type: "multiple-choice", answer: "isEmpty", options: ["isEmpty","isempty","countIsZero","nil"] },
+    
+        { question: "Which of the following is part of iOS Application development: Tools/Design/Process/Language/All?", type: "multiple-choice", answer: "All of the above", options: ["Tools","Design","Process","Language","All of the above"] },
+        { question: "Swift provides simplified memory management with ___.", type: "multiple-choice", answer: "ARC", options: ["ART","Garbage Collector","ARC","GIGO"] },
+        { question: "A visual editor for designing user interfaces for your iPhone and iPad apps.", type: "multiple-choice", answer: "Interface Builder", options: ["Views","Storyboard","Instruments","Interface Builder"] },
+        { question: "The latest Xcode version (from PDF).", type: "multiple-choice", answer: "None of the above — the latest version is Xcode 26", options: ["13","16","15","17","None of the above — the latest version is Xcode 26"] },
+        { question: "It defines an alternative name for an existing type.", type: "multiple-choice", answer: "type aliases", options: ["type declaration","type definition","type cast","type aliases"] },
+        { question: "These icons generally display a document with an app logo; they indicate what application created it or opens it.", type: "multiple-choice", answer: "files", options: ["images","applications","tools","files"] },
+        { question: "These are unordered collections of key-value associations.", type: "multiple-choice", answer: "Dictionary", options: ["Set","Range","Dictionary","Array (List)"] },
+        { question: "An ordered type of collection whose values can be duplicated.", type: "multiple-choice", answer: "Array (List)", options: ["Dictionary","Range","Array (List)","Set"] },
+        { question: "This is used when returning the return type of a function (symbol).", type: "multiple-choice", answer: "->", options: [", (Comma)","Void","-> (a hyphen followed by a right angle bracket)",": (Colon)"] },
+    
+        { question: "An analysis tool to assist you to optimize apps and monitor for memory leaks in real time.", type: "multiple-choice", answer: "Instruments", options: ["Simulator","Interface Builder","Instruments","Xcode"] },
+        { question: "Used to display the contents of your folder as a series of icons.", type: "multiple-choice", answer: "Icon View", options: ["Cover Flow View","List View","Icon View","Column View"] },
+        { question: "A statement that compares a value against several possible matching patterns.", type: "multiple-choice", answer: "switch", options: ["for-in","if","while","switch"] },
+        { question: "These are closures that have a name and don’t capture any values.", type: "multiple-choice", answer: "Global Functions", options: ["Local Functions","Global Functions","Recursive Functions","Nested Functions"] },
+        { question: "It makes programming easier, flexible, and more fun for iOS development.", type: "multiple-choice", answer: "Swift", options: ["Swift","Objective-C","Python","Java"] },
+        { question: "It provides access to your files and folders.", type: "multiple-choice", answer: "Finder", options: ["Desktop","Explorer","Folders","Finder"] },
+        { question: "A double represents a _____ bit floating-point number.", type: "multiple-choice", answer: "64", options: ["32","64","128","16"] },
+        { question: "It makes it easy to jump to tests and run them: Test Navigator.", type: "multiple-choice", answer: "Test Navigator", options: ["Instruments","Debugging","Test Navigator","Monitor"] },
+    
+        { question: "It is the minimum value of UInt8.", type: "multiple-choice", answer: "0", options: ["-128","-255","-127","0"] },
+        { question: "The iOS version where 3rd party applications became available.", type: "multiple-choice", answer: "2.0", options: ["1.0","4.0","2.0","3.0"] },
+        { question: "Version of iPhone where ‘S’ iPhone was introduced.", type: "multiple-choice", answer: "4.0", options: ["4.0","5.0","7.0","6.0"] },
+        { question: "First OS name for iPhone.", type: "multiple-choice", answer: "iPhone OS", options: ["iPhone OS","iPOS","iOperating System","OSi"] },
+        { question: "Which of the following will produce an error: let a = 0o88 ?", type: "multiple-choice", answer: "let a = 0o88", options: ["let a = 1234","let a = 0xff","let a = 0b1010","let a = 0o88"] },
+        { question: "You call a function with its name and pass input values known as:", type: "multiple-choice", answer: "argument", options: ["signature","parameter","variadic","argument"] },
+        { question: "Has quick access to Finder functions for highlighted items, such as Get Info, Move to Trash, and Services.", type: "multiple-choice", answer: "Action Menu", options: ["Search Field","Finder","Search Field","Action Menu"] },
+    
+        { question: "Are unnamed closures written in a lightweight syntax that can capture values from surrounding context?", type: "multiple-choice", answer: "Closure expressions", options: ["Closure expressions","Global functions","Nested functions","Anonymous Functions"] },
+        { question: "When did Apple introduce the App Store to iOS?", type: "multiple-choice", answer: "July 2008", options: ["June 2008","July 2008","October 2008","November 2008"] },
+        { question: "The iOS version when iPad was unveiled.", type: "multiple-choice", answer: "iOS 3.2", options: ["iOS 3.2","iOS 10","iOS 4","iOS 14"] },
+        { question: "Date when iPhone SDK was released.", type: "multiple-choice", answer: "March 6, 2008", options: ["March 6, 2009","April 6, 2009","March 6, 2008","April 6, 2008"] },
+        { question: "It simulates an iPhone or an iPad on your Mac.", type: "multiple-choice", answer: "iOS simulator", options: ["iOS simulator","iOS emulator","iOS virtual machine","iOS devices"] },
+        { question: "Used to display your folder in a spreadsheet-style manner.", type: "multiple-choice", answer: "List view", options: ["List view","Icon view","Column view","Cover flow view"] },
+    
+        { question: "Used to find out whether an optional contains a value and make it available: optional binding", type: "multiple-choice", answer: "optional binding", options: ["unwrapped optionals","optional binding","forced unwrapped","optional conditions"] },
+        { question: "Which of the following will produce some error: let b = UInt.max + 1 ?", type: "multiple-choice", answer: "let b = UInt.max + 1", options: ["let b:UInt = Int.max + 1","let b = UInt.max - 1","let b = Int.max + 1","let b = UInt.max + 1"] },
+    
+        { question: "A statement ends execution of an entire control flow statement immediately.", type: "multiple-choice", answer: "break", options: ["stop","break","continue","fallthrough"] },
+        { question: "Used to mark a loop statement or conditional statement.", type: "multiple-choice", answer: "label", options: ["goto","label","pin","comment"] },
+        { question: "It splits the Xcode editor in two.", type: "multiple-choice", answer: "Assistant Editor", options: ["Interface Builder","Assistant Editor","Code Editor","Instruments"] },
+        { question: "The Apple made this as the primary interaction model: touch.", type: "multiple-choice", answer: "touch", options: ["audio","camera","screen","touch"] },
+        { question: "The Xcode version where Swift programming was introduced.", type: "multiple-choice", answer: "6.0", options: ["5.0","4.0","6.0","7.0"] },
+        { question: "When you define a function, you can optionally define named typed input values known as _______.", type: "multiple-choice", answer: "parameter", options: ["signature","argument","return","parameter"] },
+        { question: "Used to compare two versions of a file and see commit logs: Version Editor and Source Control.", type: "multiple-choice", answer: "Version Editor and Source Control", options: ["Git Repository and Source Control","Version Editor and Git Control","Version Editor and Source Control","Git Editor and Source Control"] },
+        { question: "It is used to modify a parameter’s value, and you want those changes to persist after the function call has ended.", type: "multiple-choice", answer: "inout", options: ["var","tuple","& (ampersand)","inout"] },
+    
+        // Short code-output / code-writing items (converted to fill-blank where appropriate)
+        { question: "Write the exact output: let abc = (UInt8.max, UInt8.min, Int8.max, Int8.min); print(\"\\(abc.3) \\(abc.1) \\(abc.0) \\(abc.2) \")", type: "fill-blank", answer: "-128 0 255 127", options: [] },
+        { question: "Write the exact output: var x = 1; for y in 5...5 { x *= y % 2 } print(\"x = \\(x)\")", type: "fill-blank", answer: "x = 1", options: [] },
+        { question: "Write the exact output: let str = \"123\"; for ch in str { print(ch,\"*\",separator:\"-\", terminator:\":\") }", type: "fill-blank", answer: "1-*:2-*:3-*:", options: [] },
+        { question: "Write exact output: let x: Int! = 10; let y: Int = x; print(x!, y)", type: "fill-blank", answer: "10 10", options: [] },
+        { question: "Given A:Set = [1,2,3,4,5] and B:Set = [0,1,2,3,4,5], print(A.isSubset(of: B), A.isStrictSuperset(of: B), A.isStrictSubset(of: B), A.isDisjoint(with: B)) — what is the output?", type: "fill-blank", answer: "true, false, true, false", options: [] },
+        { question: "Given dictionary var items = [1:\"apple\", 2:\"orange\", 3:\"mango\"] — statement to empty collection?", type: "fill-blank", answer: "items.removeAll()", options: [] },
+        { question: "Empty initializer of a mutable set C with String using explicit type.", type: "fill-blank", answer: "var C: Set<String> = []", options: [] },
+        { question: "Given a tuple (123, 3.14, \"Triangle\"), declare a tuple variable shape with explicit type assigning the given values.", type: "fill-blank", answer: "var shape: (Int, Double, String) = (123, 3.14, \"Triangle\")", options: [] },
+        { question: "Apply closure optimizations and convert print(nums.sorted(by: { ... })) to its equivalent operator form for sorting descending.", type: "fill-blank", answer: "print(nums.sorted(by: >))", options: [] },
+    
+        // SUMMATIVE 3 — UI / MVC / Xcode questions
+        { question: "Which of the following is not part of a Table View Datasource structures? (short answer)", type: "fill-blank", answer: "Status Bar Controller", options: [] },
+        { question: "The top layer (front layer) of the Tab Bar Controller?", type: "multiple-choice", answer: "Tab bar", options: ["Tab bar","Nav bar","Toolbar","Status bar"] },
+        { question: "This is called before the receiver’s view is about to be displayed onscreen and before any animation.", type: "multiple-choice", answer: "viewWillAppear", options: ["viewDidLoad","viewWillAppear","viewDidAppear","awakeFromNib"] },
+        { question: "It is called after the receiver’s view was added to a window.", type: "multiple-choice", answer: "viewDidLoad", options: ["viewDidLoad","viewWillAppear","awakeFromNib","viewDidAppear"] },
+        { question: "The delegate is usually expected to conform to a specific ___.", type: "fill-blank", answer: "protocol", options: [] },
+        { question: "This appears at the bottom of the iPhone app and holds icons tied to functions such as Share, Download, Delete.", type: "multiple-choice", answer: "Toolbar", options: ["Toolbar","Tab Bar","Status Bar","Navigation Bar"] },
+        { question: "It gets and processes interactions from the view.", type: "multiple-choice", answer: "Controller", options: ["Model","View","Controller","Delegate"] },
+        { question: "Compare controller and model responsibilities in MVC (short answer).", type: "fill-blank", answer: "Model manages data and business logic; Controller manages user input and updates Model and View.", options: [] },
+        { question: "Its normally used to perform additional initialization steps on views that are loaded from nib files.", type: "multiple-choice", answer: "awakeFromNib", options: ["viewDidLoad","awakeFromNib","viewWillAppear","viewDidAppear"] },
+        { question: "This table view content can only be built in the storyboard.", type: "multiple-choice", answer: "Static", options: ["Static","Dynamic","Multiple","Single"] },
+        { question: "It gives the users the option to navigate between page hierarchies.", type: "multiple-choice", answer: "Navigation Bar", options: ["Navigation Bar","Tab Bar","Toolbar","Status Bar"] },
+        { question: "Which of the following is not true when testing iOS apps on device: Using CSR and Provisioning is optional.", type: "multiple-choice", answer: "Using CSR and Provisioning is optional (Not true)", options: ["True","False","Using CSR and Provisioning is optional (Not true)","Not applicable"] },
+        { question: "Which is not true about a Tab Bar Controller? VCs are loaded one by one.", type: "multiple-choice", answer: "VCs are loaded one by one (Not true)", options: ["True","False","VCs are loaded one by one (Not true)","Not applicable"] },
+        { question: "It simplifies the setup between view controllers with a graphical flow between screens.", type: "multiple-choice", answer: "Storyboard", options: ["Storyboard","XIB","Nib","Interface Builder"] },
+        { question: "It is used to specify code in response to changes to properties.", type: "multiple-choice", answer: "Property Observers", options: ["Property Observers","Delegates","Notifications","KVO"] },
+        { question: "It presents data in a single-column list of scrollable rows that may be divided into sections.", type: "multiple-choice", answer: "Table View", options: ["Table View","Collection View","Scroll View","Stack View"] },
+        { question: "It displays device’s current battery level, 3G connection, bars of reception, phone carrier, etc.", type: "multiple-choice", answer: "Status Bar", options: ["Status Bar","Navigation Bar","Toolbar","Tab Bar"] },
+        { question: "It is used to allow multiple objects to communicate.", type: "multiple-choice", answer: "Delegates", options: ["Delegates","Notifications","Closures","Protocols"] },
+    
+        { question: "It provides quick access to the various parts of your project: navigator area.", type: "fill-blank", answer: "navigator area", options: [] },
+        { question: "It allows you to edit source code, UIs, and other resources: editor area.", type: "fill-blank", answer: "editor area", options: [] },
+        { question: "Allows you to view and edit information about items selected in Editor area: inspector area.", type: "fill-blank", answer: "inspector area", options: [] },
+        { question: "It provides console and shows errors and background operations: debug area.", type: "fill-blank", answer: "debug area", options: [] },
+        { question: "Summarize the main areas in Xcode and their functions (short answer).", type: "fill-blank", answer: "Navigator: quick access; Editor: edit code/UI; Inspector: item info; Debug: console/errors.", options: [] },
+    
+        // IMAGE questions (these include the extracted image paths)
+        { question: "Refer to the image (page with diagram). Provide the requested set outputs or answers as shown in the PDF (image below).", type: "fill-blank", answer: "See image and answer per the PDF (example outputs included in other questions)", options: [], image: "assets/img_page3_xref14.png" },
+        { question: "Refer to the image (page with diagram). Answer/describe the interface or layout shown (short answer).", type: "fill-blank", answer: "Describe the UI shown in the image per PDF context", options: [], image: "assets/img_page12_xref36.png" }
+    
+    ] // end module 6  
   };
   

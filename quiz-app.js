@@ -91,12 +91,32 @@ function displayQuestion() {
   questionText.textContent = question.question;
 
   // Handle image note if present
-  if (question.note) {
-    imageContainer.classList.remove('hidden');
-    imageNote.textContent = question.note;
-  } else {
-    imageContainer.classList.add('hidden');
-  }
+    // --- Image handling (Option B: image BELOW question text) ---
+    imageContainer.innerHTML = ''; // clear previous content
+    if (question.image) {
+      // build IMG element and optional caption/note
+      const imgEl = document.createElement('img');
+      imgEl.src = question.image; // e.g., "assets/img_page3_xref14.png"
+      imgEl.alt = "Question image";
+      imgEl.className = 'question-image';
+  
+      imageContainer.appendChild(imgEl);
+  
+      if (question.note) {
+        const noteP = document.createElement('p');
+        noteP.id = 'image-note';
+        noteP.style.color = '#6b7280';
+        noteP.style.marginTop = '10px';
+        noteP.textContent = question.note;
+        imageContainer.appendChild(noteP);
+      }
+  
+      imageContainer.classList.remove('hidden');
+    } else {
+      imageContainer.classList.add('hidden');
+    }
+    // --------------------------------------------------------------
+  
 
   // Clear previous feedback
   feedback.classList.add('hidden');
@@ -114,25 +134,43 @@ function displayOptions() {
   const question = currentQuestions[currentQuestionIndex];
   const userAnswer = userAnswers[currentQuestionIndex];
 
-  question.options.forEach((option, index) => {
-    const optionDiv = document.createElement('div');
-    optionDiv.className = 'option';
-    optionDiv.textContent = option;
+  if (question.type === 'fill-blank') {
+    // show a text input and a button
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.placeholder = 'Type your answer here';
+    input.className = 'option'; // reuse styling
 
-    // If user has already answered this question
     if (userAnswer !== null) {
-      // Mark user’s previously selected option only (no disable)
-      if (option === userAnswer) {
+      input.value = userAnswer;
+    }
+
+    const submitBtn = document.createElement('button');
+    submitBtn.className = 'nav-btn next';
+    submitBtn.textContent = 'Submit Answer';
+    submitBtn.style.marginTop = '10px';
+    submitBtn.addEventListener('click', () => {
+      selectOption(input.value.trim());
+    });
+
+    optionsContainer.appendChild(input);
+    optionsContainer.appendChild(submitBtn);
+
+  } else {
+    // multiple-choice / true-false
+    question.options.forEach((option) => {
+      const optionDiv = document.createElement('div');
+      optionDiv.className = 'option';
+      optionDiv.textContent = option;
+
+      if (userAnswer !== null && option === userAnswer) {
         optionDiv.classList.add('selected');
       }
-    }
-    
-    // Always allow reselecting options
-    optionDiv.addEventListener('click', () => selectOption(option));
-    
 
-    optionsContainer.appendChild(optionDiv);
-  });
+      optionDiv.addEventListener('click', () => selectOption(option));
+      optionsContainer.appendChild(optionDiv);
+    });
+  }
 }
 
 function selectOption(option) {
