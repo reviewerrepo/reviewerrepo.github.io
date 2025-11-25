@@ -18,6 +18,7 @@ const imageContainer = document.getElementById('image-container');
 const imageNote = document.getElementById('image-note');
 const feedback = document.getElementById('feedback');
 const optionsContainer = document.getElementById('options');
+const backHomeBtn = document.getElementById('back-home-btn');
 const prevBtn = document.getElementById('prev-btn');
 const nextBtn = document.getElementById('next-btn');
 
@@ -181,6 +182,22 @@ prevBtn.addEventListener('click', () => {
     displayQuestion();
   }
 });
+
+backHomeBtn.addEventListener('click', () => {
+  // Reset everything
+  selectedModules.clear();
+  userAnswers = [];
+  score = 0;
+
+  // Reset module button selections
+  moduleButtons.forEach(btn => btn.classList.remove('selected'));
+  startQuizBtn.disabled = true;
+
+  // Show home screen
+  quizContainer.classList.add('hidden');
+  startScreen.classList.remove('hidden');
+});
+
 
 nextBtn.addEventListener('click', () => {
   if (currentQuestionIndex < currentQuestions.length - 1) {
