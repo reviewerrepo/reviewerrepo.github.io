@@ -121,22 +121,15 @@ function displayOptions() {
 
     // If user has already answered this question
     if (userAnswer !== null) {
-      optionDiv.classList.add('disabled');
+      // Mark user’s previously selected option only (no disable)
       if (option === userAnswer) {
         optionDiv.classList.add('selected');
-        if (option === question.answer) {
-          optionDiv.classList.add('correct');
-        } else {
-          optionDiv.classList.add('wrong');
-        }
       }
-      if (option === question.answer && option !== userAnswer) {
-        optionDiv.classList.add('correct');
-      }
-    } else {
-      // Allow selection
-      optionDiv.addEventListener('click', () => selectOption(option));
     }
+    
+    // Always allow reselecting options
+    optionDiv.addEventListener('click', () => selectOption(option));
+    
 
     optionsContainer.appendChild(optionDiv);
   });
